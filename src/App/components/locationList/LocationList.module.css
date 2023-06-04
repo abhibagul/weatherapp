@@ -1,0 +1,41 @@
+.locationList {
+    flex-shrink: 0;
+    width: 300px;
+    font-family: "SF Pro Display", sans-serif;
+    position: relative;
+}
+
+.locationListSelection:hover .locationHistory {
+    display: block;
+}
+
+.locationHistory {
+    position: absolute;
+    left: 0px;
+    list-style-type: none;
+    background-color: #fff;
+    margin: 0px;
+    box-shadow: 2px 2px 5px rgba(0, 00, 0, .1), -2px -2px 5px rgba(0, 00, 0, .1);
+    display: none;
+    padding: 0;
+
+}
+
+.locationHistory li {
+    min-width: 200px;
+    padding: 10px 15px;
+    transition: .2s all ease-in-out;
+    font-size: 12px;
+    color: #333;
+}
+
+.locationHistory li i {
+    color: #ccc;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.locationHistory li:hover {
+    cursor: pointer;
+    background: #f7f7f7;
+}

@@ -1,0 +1,43 @@
+.daily-weather-section>h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.dailyforecast {
+    background: #D2DFFF;
+    border-radius: 12px;
+    display: flex;
+    gap: 10px;
+    padding: 16px;
+    align-items: center;
+}
+
+.weather_data_daily {
+    flex-grow: 1;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.weather_text_daily_day {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #201C1C
+}
+
+.weather_text_daily_message {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: #494343;
+}

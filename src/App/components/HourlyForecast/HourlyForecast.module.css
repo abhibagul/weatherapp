@@ -1,0 +1,86 @@
+.hourly-grid {
+    display: flex;
+    gap: 10px;
+    overflow-x: hidden;
+}
+
+.hourly-grid:hover {
+    overflow-x: auto;
+}
+
+.futureWeatherCard {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+    align-items: center;
+    background: #FBFBFB;
+    border-radius: 4px;
+    flex-shrink: 0;
+    min-width: 160px;
+    max-width: 180px;
+}
+
+.weather_data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hourly-weather-section {
+    margin: 60px 0px;
+}
+
+.hourly-weather-section>h3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+    color: #000000;
+}
+
+@media only screen and (max-width: 512px) {
+
+    .hourly-weather-section {
+        margin: 40px 0px;
+    }
+
+    .hourly-weather-section>h3 {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 23px;
+
+        color: #000000;
+    }
+
+    .futureWeatherCard {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-width: 80px;
+    }
+
+    .weather_data {
+        align-items: center;
+    }
+
+    .weather_temprature {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: #201C1C;
+    }
+
+    .weather_time {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #494343;
+    }
+}

@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  src: local('SF Pro Display'), url(./fonts/SFPRO/SFPRODISPLAYREGULAR.OTF) format('opentype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 500;
+  src: local('SF Pro Display'), url(./fonts/SFPRO/SFPRODISPLAYMEDIUM.OTF) format('opentype');
+}
+
+@font-face {
+  font-family: 'SF Pro Display';
+  font-weight: 600;
+  src: local('SF Pro Display'), url(./fonts/SFPRO/SFPRODISPLAYBOLD.OTF) format('opentype');
+}
+
+.placeholder {
+  display: inline-block;
+  animation: placeholder-glow 1s linear 0s infinite alternate;
+  background: rgba(0, 0, 0, .1);
+  border-radius: 10px;
+}
+
+@keyframes placeholder-glow {
+  50% {
+    opacity: .2;
+  }
+}

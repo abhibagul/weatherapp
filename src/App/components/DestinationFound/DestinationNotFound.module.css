@@ -1,0 +1,23 @@
+.dsnfcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recent-searches {
+    margin-bottom: 10px;
+}
+
+.recent-searches button {
+    border: none;
+    background-color: #f7f7f7;
+    border: 3px;
+    padding: 5px 10px;
+}
+
+
+.recent-searches button:hover {
+    cursor: pointer;
+}

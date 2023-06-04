@@ -1,0 +1,129 @@
+.locationSearchBar {
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px 15px;
+    font-family: "SF Pro Display", sans-serif;
+    padding-right: 50px;
+}
+
+.locationSearchBar:focus {
+    outline: none;
+    border-color: #4F7FFA;
+}
+
+.searchbar_container,
+.searchbar_container_non_collapse {
+    position: relative;
+    flex-grow: 1;
+    max-width: 819px;
+    width: 100%;
+}
+
+.searchbar_container .searchbarSearchIcon,
+.searchbar_container_non_collapse .searchbarSearchIcon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #2E3A59;
+    font-size: 17px;
+    background: transparent;
+    border: none;
+    padding: 0px;
+}
+
+.searchbarSearchIcon:hover {
+    cursor: pointer;
+}
+
+.searchbar_container:has(:focus) .locationHistory,
+.searchbar_container_non_collapse:has(:focus) .locationHistory {
+    display: block;
+}
+
+.locationHistory {
+    position: absolute;
+    left: 0px;
+    list-style-type: none;
+    background-color: #fff;
+    margin: 0px;
+    box-shadow: 2px 2px 5px rgba(0, 00, 0, .1), -2px -2px 5px rgba(0, 00, 0, .1);
+    display: none;
+    padding: 0;
+    width: 100%;
+}
+
+.locationHistory li {
+    width: 100%;
+    padding: 10px 15px;
+    transition: .2s all ease-in-out;
+    font-size: 12px;
+    color: #333;
+}
+
+.locationHistory li i {
+    color: #ccc;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+.locationHistory li:hover {
+    cursor: pointer;
+    background: #f7f7f7;
+}
+
+.toggleShowSearch,
+.toggleHideSearch {
+    display: none;
+}
+
+@media only screen and (max-width: 512px) {
+
+    .searchbar_container .toggleShowSearch,
+    .searchbar_container .toggleHideSearch {
+        display: block;
+        border: none;
+        background: transparent;
+        font-size: 16px;
+    }
+
+    .searchbar_container .toggleShowSearch:hover,
+    .searchbar_container .toggleHideSearch:hover {
+        cursor: pointer;
+    }
+
+    .searchbar_container .toggleShowSearch {
+        margin-right: 20px;
+    }
+
+    .searchbar_container {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        min-height: 40px;
+        box-sizing: border-box;
+        padding: 0px 10px;
+        gap: 10px;
+    }
+
+    .searchbar_container .locationSearchBar {
+        border: none;
+    }
+
+    .searchbar_container form {
+        width: 100%;
+        position: relative;
+    }
+
+    .searchbar_container .hideLocationSearchBar {
+        display: none;
+    }
+
+    .locationHistory {
+        top: 40px;
+    }
+}

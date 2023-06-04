@@ -1,0 +1,97 @@
+.locationHeader {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #000000;
+}
+
+.locationDetailsModule {
+    margin: 60px 0px;
+}
+
+.locationDetailsAQI {
+    background: #FAFAFA;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.locationDetailsAQIDataHeader {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #201C1C;
+}
+
+.locationDetailsAQIDataText {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #494343;
+}
+
+.locationDetailsAQIData {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.locationOtherDetails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, calc(50% - 10px));
+    gap: 10px
+}
+
+.locationDetailsCard {
+    background: #FAFAFA;
+    border-radius: 12px;
+    padding: 25px 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.locationDetailsCardValue {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    color: #201C1C;
+}
+
+.locationDetailsCardDescription {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #494343;
+}
+
+.locationDetailsCardMeta {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media only screen and (max-width: 512px) {
+    .locationOtherDetails {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, calc(50% - 10px));
+        gap: 10px
+    }
+
+    .locationDetailsCardMeta {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+}
