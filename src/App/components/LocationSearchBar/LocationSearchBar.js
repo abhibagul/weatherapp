@@ -11,6 +11,7 @@ export default function LocationSearchBar({ isCollpasible = true }) {
 
     const [serachQuery, setSearchQuery] = useState("");
     const [searchbarVisible, setSearchBarVisible] = useState(false);
+    const [showDropDown, setShowDropDown] = useState(false);
 
     const navigate = useNavigate();
 
@@ -23,6 +24,7 @@ export default function LocationSearchBar({ isCollpasible = true }) {
 
         navigate("/" + serachQuery, { state: { location: serachQuery } });
         setSearchQuery("");
+        setShowDropDown(false)
     }
 
     useEffect(() => {
@@ -33,18 +35,23 @@ export default function LocationSearchBar({ isCollpasible = true }) {
         console.log(loc, 'loc');
         navigate("/" + loc, { state: { location: loc } });
         setSearchQuery("");
-
+        setSearchBarVisible(false);
+        setShowDropDown(false)
     }
 
     useEffect(() => {
 
     }, [locations])
 
+    useEffect(() => {
+
+    }, [showDropDown])
+
     return (
         <div className={(isCollpasible) ? searchBarStyle['searchbar_container'] : searchBarStyle['searchbar_container_non_collapse']}>
 
             <form className={(searchbarVisible) ? searchBarStyle['showLocationSearchBar'] : searchBarStyle['hideLocationSearchBar']} onSubmit={updateLocation}>
-                <input placeholder='Search' className={searchBarStyle['locationSearchBar']} type='search' value={serachQuery} onChange={updateSearchQuery}></input>
+                <input onFocus={() => setShowDropDown(true)} placeholder='Search' className={searchBarStyle['locationSearchBar']} type='search' value={serachQuery} onChange={updateSearchQuery}></input>
                 <button className={searchBarStyle['searchbarSearchIcon']} ><i className='ci-Search_Magnifying_Glass'></i></button>
             </form>
             {(isCollpasible && !searchbarVisible) &&
@@ -53,10 +60,10 @@ export default function LocationSearchBar({ isCollpasible = true }) {
             {(isCollpasible && searchbarVisible) &&
                 <button className={searchBarStyle['toggleHideSearch']} onClick={() => setSearchBarVisible(false)}><i className='ci-Close_LG'></i></button>}
 
-            {(locations.length > 0) && <ul className={searchBarStyle['locationHistory']}>
+            {(locations.length > 0 && showDropDown) && <ul className={searchBarStyle['locationHistory']}>
                 {
                     locations.map(loc => {
-                        return (loc.toLowerCase().indexOf(serachQuery) == -1) ? "" : <li key={loc} className={searchBarStyle['locationHistoryItem']} onClick={() => showHistoryLocation(loc)}><i className='ci-Redo'></i>{loc}</li>
+                        return (loc.toLowerCase().indexOf(serachQuery.toLowerCase()) == -1) ? "" : <li key={loc} className={searchBarStyle['locationHistoryItem']} onClick={() => showHistoryLocation(loc)}><i className='ci-Redo'></i>{loc}</li>
                     })
                 }
             </ul>}

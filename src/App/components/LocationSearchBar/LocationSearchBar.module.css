@@ -48,7 +48,7 @@
     background-color: #fff;
     margin: 0px;
     box-shadow: 2px 2px 5px rgba(0, 00, 0, .1), -2px -2px 5px rgba(0, 00, 0, .1);
-    display: none;
+    /* display: none; */
     padding: 0;
     width: 100%;
 }

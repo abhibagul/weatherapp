@@ -37,7 +37,6 @@ export default function Homepage() {
                     return data;
                 })
                 .then(data => {
-                    console.log(data, 'axd');
                     if ("error" in data) {
                         setAppSettings(settings => {
                             return { ...settings, weatherData: {}, isLoading: false }
